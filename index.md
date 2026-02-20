@@ -2,6 +2,17 @@
 layout: home
 author_profile: false
 title: "SCIE-PANC"
+permalink: /
+author_profile: false
+header:
+  overlay_color: "#ffffff"
+  overlay_filter: "0.0"
+  actions:
+    - label: "Projects"
+      url: "/projects/"
+    - label: "Publications"
+      url: "/publications/"
+excerpt: "Short tagline that explains what TRANSCAN is in one sentence."
 ---
 
 Welcome to **SCIE-PANC**.

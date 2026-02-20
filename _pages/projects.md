@@ -5,7 +5,7 @@ permalink: /projects/
 author_profile: false
 toc: false 
 show_title: false
-classes: ["wide", "cvpage"]
+classes: "wide"
 ---
 
 Pancreatic ductal adenocarcinoma (PDAC) is an aggressive, highly metastatic and of the most therapy-resistant cancers. Poor prognosis of PDAC patients is attributed to the high heterogeneity of PDAC tumors, and to their fibrotic and immune- averse tumor microenvironment (TME). However, how the PDAC TME responds and adapts to standard therapy at the level of the 3D epigenome remains surprisingly unknown.
