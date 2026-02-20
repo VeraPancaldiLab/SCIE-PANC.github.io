@@ -6,7 +6,6 @@ permalink: /
 author_profile: false
 header:
   overlay_image: /SCIE-PANC.github.io/assets/images/network_banner.png
-  overlay_color: "#000000"
   overlay_filter: "0.35"
   caption: ""
 excerpt: >
