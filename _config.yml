@@ -3,8 +3,8 @@ title: "SCIE-PANC"
 name: "SCIE-PANC"
 description: "Project website"
 locale: en-US
-url: "https://scie-panc.github.io"
-baseurl: ""
+url: "https://verapancaldilab.github.io"
+baseurl: "/SCIE-PANC.github.io"
 
 # ---- Theme ----
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
