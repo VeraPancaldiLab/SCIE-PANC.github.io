@@ -5,8 +5,10 @@ title: "SCIE-PANC"
 permalink: /
 author_profile: false
 header:
-  overlay_color: "#ffffff"
-  overlay_filter: "0.0"
+  overlay_image: /SCIE-PANC.github.io/assets/images/network_banner.png
+  overlay_color: "#000000"
+  overlay_filter: "0.35"
+  caption: ""
 excerpt: >
   <img src="/SCIE-PANC.github.io/assets/images/flags/de.png" width="80">
   <img src="/SCIE-PANC.github.io/assets/images/flags/es.png" width="80">
