@@ -1,12 +1,16 @@
 ---
-layout: home
-author_profile: false
+layout: splash
 title: "SCIE-PANC"
 permalink: /
 author_profile: false
+classes: wide
+
 header:
   overlay_image: /SCIE-PANC.github.io/assets/images/network_banner.jpg
+  overlay_filter: 0.35
+  overlay_color: "#000000"
   caption: ""
+
 excerpt: >
   <img src="/SCIE-PANC.github.io/assets/images/flags/de.png" width="80">
   <img src="/SCIE-PANC.github.io/assets/images/flags/es.png" width="80">
