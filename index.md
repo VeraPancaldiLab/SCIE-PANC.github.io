@@ -8,12 +8,12 @@ header:
   overlay_color: "#ffffff"
   overlay_filter: "0.0"
 excerpt: >
-  <img src="/SCIE-PANC.github.io/assets/images/flags/de.png" width="20"> DE
-  <img src="/SCIE-PANC.github.io/assets/images/flags/es.png" width="20"> ES
-  <img src="/SCIE-PANC.github.io/assets/images/flags/fr.png" width="20"> FR
-  <img src="/SCIE-PANC.github.io/assets/images/flags/ie.png" width="20"> IE
-  <img src="/SCIE-PANC.github.io/assets/images/flags/tk.png" width="20"> TR
-  <img src="/SCIE-PANC.github.io/assets/images/flags/tw.png" width="20"> TW
+  <img src="/SCIE-PANC.github.io/assets/images/flags/de.png" width="80">
+  <img src="/SCIE-PANC.github.io/assets/images/flags/es.png" width="80">
+  <img src="/SCIE-PANC.github.io/assets/images/flags/fr.png" width="80">
+  <img src="/SCIE-PANC.github.io/assets/images/flags/ie.png" width="80">
+  <img src="/SCIE-PANC.github.io/assets/images/flags/tk.png" width="80">
+  <img src="/SCIE-PANC.github.io/assets/images/flags/tw.png" width="80">
   <br>
   Stromal Compartment and Immune Epigenome spatial networks to counter therapy evasion in PANcreatic Cancer
 ---
