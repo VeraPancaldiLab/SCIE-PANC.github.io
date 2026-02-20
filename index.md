@@ -7,21 +7,16 @@ author_profile: false
 header:
   overlay_color: "#ffffff"
   overlay_filter: "0.0"
-  actions:
-    - label: "Projects"
-      url: "/projects/"
-    - label: "Publications"
-      url: "/publications/"
-excerpt: "Short tagline that explains what TRANSCAN is in one sentence."
+excerpt: >
+  <img src="/SCIE-PANC.github.io/assets/images/flags/de.png" width="20"> DE
+  <img src="/SCIE-PANC.github.io/assets/images/flags/es.png" width="20"> ES
+  <img src="/SCIE-PANC.github.io/assets/images/flags/fr.png" width="20"> FR
+  <img src="/SCIE-PANC.github.io/assets/images/flags/ie.png" width="20"> IE
+  <img src="/SCIE-PANC.github.io/assets/images/flags/tk.png" width="20"> TR
+  <img src="/SCIE-PANC.github.io/assets/images/flags/tw.png" width="20"> TW
+  <br>
+  Stromal Compartment and Immune Epigenome spatial networks to counter therapy evasion in PANcreatic Cancer
 ---
-
-Welcome to **SCIE-PANC**.
-
-CountryDE, ES, FR, IE, TR, TW
-CallJTC 2023
-SCIE-PANC
-Stromal Compartment and Immune Epigenome spatial networks to counter therapy evasion in PANcreatic Cancer
-
 
 Project Coordinator
 
