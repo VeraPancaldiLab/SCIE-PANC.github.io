@@ -6,7 +6,7 @@ author_profile: false
 classes: wide
 
 header:
-  overlay_image: /SCIE-PANC.github.io/assets/images/network_banner.jpg
+  overlay_image: <img src="/SCIE-PANC.github.io/assets/images/network_banner.jpg" width="2000">
   overlay_filter: 0
 
 excerpt: >
