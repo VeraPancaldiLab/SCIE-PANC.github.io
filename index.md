@@ -7,9 +7,7 @@ classes: wide
 
 header:
   overlay_image: /SCIE-PANC.github.io/assets/images/network_banner.jpg
-  overlay_filter: 0.35
-  overlay_color: "#000000"
-  caption: ""
+  overlay_filter: 0
 
 excerpt: >
   <img src="/SCIE-PANC.github.io/assets/images/flags/de.png" width="80">
