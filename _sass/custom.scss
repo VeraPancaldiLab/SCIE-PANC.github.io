@@ -6,13 +6,70 @@ body.cvpage .author__avatar,
 body.cvpage .author__content,
 body.cvpage .author__urls-wrapper { display: none !important; }
 body {
-  background-color: #ffffff;
+  background-color: #ede6e6;
   background-image: none;
+}
+
+.team-section {
+  margin-top: 3rem;
+}
+
+.team-section__title {
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+@media (max-width: 850px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.team-card--lead {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.team-card__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.team-card__role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.team-card__org {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.team-card__meta {
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 /* ——— Barre de navigation globale (menu principal) ——— */
 .greedy-nav {
-  background: #ffffff !important;
+  background: #d1f2f2 !important;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06) !important;
   border: none !important;
 }
