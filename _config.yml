@@ -1,0 +1,63 @@
+# ---- Site basics ----
+title: "SCIE-PANC"
+name: "SCIE-PANC"
+description: "Project website"
+locale: en-US
+url: "https://SCIE-PANC.github.io"
+baseurl: ""
+
+# ---- Theme ----
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+
+# ---- Collections / Permalinks ----
+permalink: /:categories/:title/
+
+# ---- Plugins (tous supportés par GitHub Pages) ----
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+
+# ---- Author profile (affiché sur la page d'accueil) ----
+author:
+  name: "SCIE-PANC"
+  avatar:
+  bio: ""
+  location: ""
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/SCIE-PANC"
+
+# ---- Navigation ----
+
+navbar:
+  title: "SCIE-PANC"
+
+# ---- Footer ----
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/SCIE-PANC"
+
+# ---- Build settings ----
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+
+include:
+  - _pages
+  - _data
+  - _sass
