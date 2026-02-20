@@ -6,9 +6,7 @@ author_profile: false
 classes: wide
 
 header:
-  overlay_image: /SCIE-PANC.github.io/assets/images/network_banner.png
-  overlay_filter: rgba(0, 0, 0, 0.0)
-  show_overlay_excerpt: false
+  image: <img src="/SCIE-PANC.github.io/assets/images/network_banner.png" style="width:100%;height:420px;object-fit:cover;display:block;">
 
 excerpt: >
   <img src="/SCIE-PANC.github.io/assets/images/flags/de.png" width="80">
@@ -26,8 +24,6 @@ The SCIE-PANC project, an interdisciplinary effort involving partners in 6 diffe
 <br>
 
 ## Project Team
-
-<img src="/SCIE-PANC.github.io/assets/images/network_banner.png" style="width:100%;height:420px;object-fit:cover;display:block;">
 
 <section class="team-section">
   <h3 class="team-section__title">Project Coordinator</h3>
