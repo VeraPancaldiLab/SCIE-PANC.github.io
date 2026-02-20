@@ -77,6 +77,11 @@ body {
   min-height: 420px;
   background-position: center;
   background-size: cover;
+  display: block;
+}
+
+.page__hero {
+  display: block;
 }
 
 .page__hero-image {
