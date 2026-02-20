@@ -3,12 +3,12 @@ title: "SCIE-PANC"
 name: "SCIE-PANC"
 description: "Project website"
 locale: en-US
-url: "https://SCIE-PANC.github.io"
+url: "https://scie-panc.github.io"
 baseurl: ""
 
 # ---- Theme ----
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "contrast"
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "air"
 
 # ---- Collections / Permalinks ----
 permalink: /:categories/:title/

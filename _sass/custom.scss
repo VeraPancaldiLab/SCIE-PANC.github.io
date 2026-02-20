@@ -43,11 +43,7 @@ body {
 }
 
 /* ——— Ajuste la hauteur du header sur tout le site ——— */
-.page__hero,
-.page__hero--overlay {
-  max-height: 15px;
-  overflow: hidden;
-}
+
 .page__hero-image {
   object-fit: cover;
   height: 100% !important;

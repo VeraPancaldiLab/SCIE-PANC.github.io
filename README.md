@@ -1,3 +1,3 @@
 # Site GitHub Pages — Minimal Mistakes
 
-👉 SCIE-PANC : [Profil](https://scie-panc.github.io/)
+👉 Site : [SCIE-PANC](https://verapancaldilab.github.io/SCIE-PANC.github.io/)
