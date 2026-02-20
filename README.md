@@ -1,3 +1,3 @@
 # Site GitHub Pages — Minimal Mistakes
 
-👉 SCIE-PANC : [Profil](https://transcan.github.io/)
+👉 SCIE-PANC : [Profil](https://scie-panc.github.io/)
