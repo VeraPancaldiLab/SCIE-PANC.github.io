@@ -1,9 +1,0 @@
-main:
-  - title: "Home"
-    url: /
-  - title: "Project"
-    url: /project/
-  - title: "News"
-    url: /news/
-  - title: "Publications"
-    url: /publications/

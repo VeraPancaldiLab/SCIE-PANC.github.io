@@ -1,0 +1,341 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL ?? '';
+
+const partners = [
+  {
+    name: 'Argyris Papantonis',
+    role: 'Project Coordinator',
+    org: 'University Medical Center Göttingen',
+    location: 'Göttingen, Germany',
+    flag: `${base}/images/flags/de.png`,
+    lead: true,
+  },
+  {
+    name: 'Biola Maria Javierre',
+    org: 'Institute for Health Science Research Germans Trias i Pujol',
+    location: 'Barcelona, Spain',
+    flag: `${base}/images/flags/es.png`,
+  },
+  {
+    name: 'Grainne O\'Kane',
+    org: 'Trinity St. James Cancer Institute',
+    location: 'Dublin, Ireland',
+    flag: `${base}/images/flags/ie.png`,
+  },
+  {
+    name: 'Vera Pancaldi',
+    org: 'Cancer Research Center of Toulouse (CRCT) — INSERM',
+    location: 'Toulouse, France',
+    flag: `${base}/images/flags/fr.png`,
+  },
+  {
+    name: 'Shu-Ping Wang',
+    org: 'Academia Sinica',
+    location: 'Taipei, Taiwan',
+    flag: `${base}/images/flags/tw.png`,
+  },
+  {
+    name: 'Aykut Erbas',
+    org: 'Bilkent University',
+    location: 'Ankara, Türkiye',
+    flag: `${base}/images/flags/tk.png`,
+  },
+];
+---
+
+<Layout title="SCIE-PANC — Home">
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-bg" style={`background-image:url('${base}/images/network_banner.png')`}></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-flags fade-up">
+        {['de','es','fr','ie','tk','tw'].map(code => (
+          <img src={`${base}/images/flags/${code}.png`} alt={code} class="flag" />
+        ))}
+      </div>
+      <h1 class="hero-title fade-up fade-up-d1">SCIE-PANC</h1>
+      <p class="hero-subtitle fade-up fade-up-d2">
+        Stromal Compartment and Immune Epigenome spatial networks<br />
+        to counter therapy evasion in PANcreatic Cancer
+      </p>
+      <div class="hero-actions fade-up fade-up-d3">
+        <a href={`${base}/project/`} class="btn btn-primary">Learn about the project</a>
+        <a href={`${base}/publications/`} class="btn btn-outline">Publications</a>
+      </div>
+      <div class="hero-badge fade-up fade-up-d4">
+        <span class="badge-dot"></span>
+        International consortium · 6 countries · 3 continents
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── Mission ── -->
+  <section class="mission">
+    <div class="container mission-inner">
+      <div class="mission-text">
+        <span class="section-label">About</span>
+        <h2 class="section-title">An interdisciplinary effort against pancreatic cancer</h2>
+        <p class="prose">
+          The SCIE-PANC project unites researchers from six countries across three continents to 
+          improve treatment outcomes in pancreatic ductal adenocarcinoma (PDAC) — one of the most 
+          aggressive and therapy-resistant cancers.
+        </p>
+        <p class="prose" style="margin-top:1rem;">
+          Our consortium brings together experts in 3D-epigenomics, integrative bioinformatics, 
+          mechanobiology, computational modeling, drug screening, and PDAC biology, 
+          all working in concert toward new therapeutic strategies.
+        </p>
+        <a href={`${base}/project/`} class="text-link">Read the full project description →</a>
+      </div>
+      <div class="mission-stats">
+        {[
+          { n: '6', label: 'Partner Countries' },
+          { n: '3', label: 'Continents' },
+          { n: '5', label: 'Research Groups' },
+        ].map(s => (
+          <div class="stat-card">
+            <div class="stat-n">{s.n}</div>
+            <div class="stat-label">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── Team ── -->
+  <section class="team">
+    <div class="container">
+      <span class="section-label">Team</span>
+      <h2 class="section-title">Project Consortium</h2>
+
+      <!-- Lead card -->
+      <div class="lead-card fade-up">
+        {partners.filter(p => p.lead).map(p => (
+          <div class="lead-inner">
+            <img src={p.flag} alt="Germany" class="card-flag" />
+            <div>
+              <div class="card-role">Project Coordinator</div>
+              <div class="card-name">{p.name}</div>
+              <div class="card-org">{p.org}</div>
+              <div class="card-loc">{p.location}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Partner grid -->
+      <h3 class="partners-title">Project Partners</h3>
+      <div class="partners-grid">
+        {partners.filter(p => !p.lead).map((p, i) => (
+          <article class={`partner-card fade-up fade-up-d${i + 1}`}>
+            <img src={p.flag} alt={p.location} class="card-flag" />
+            <div class="card-name">{p.name}</div>
+            <div class="card-org">{p.org}</div>
+            <div class="card-loc">{p.location}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35) saturate(0.6);
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,22,40,0.75) 0%, rgba(29,78,216,0.3) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-block: 5rem;
+}
+.hero-flags {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.flag { height: 32px; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.35); }
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  max-width: 55ch;
+  margin-bottom: 2.2rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.6rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-primary {
+  background: #fff;
+  color: var(--navy);
+}
+.btn-primary:hover { background: var(--off-white); transform: translateY(-1px); }
+.btn-outline {
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: #fff;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.02em;
+}
+.badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ── Mission ── */
+.mission-inner {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .mission-inner { grid-template-columns: 1fr; }
+}
+.mission-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.stat-card {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.stat-n {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--blue-light);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.4rem;
+  letter-spacing: 0.05em;
+}
+.text-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--blue);
+  text-decoration: none;
+}
+.text-link:hover { text-decoration: underline; }
+
+/* ── Team ── */
+.lead-card {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+.lead-inner { display: flex; gap: 1.5rem; align-items: flex-start; }
+.lead-inner .card-flag { height: 40px; border-radius: 4px; flex-shrink: 0; }
+
+.card-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 0.3rem;
+}
+.card-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+.card-org { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 0.2rem; }
+.card-loc { font-size: 0.88rem; color: rgba(255,255,255,0.45); }
+
+.partners-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  font-family: var(--font-body);
+  letter-spacing: 0.03em;
+}
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.1rem;
+}
+.partner-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.partner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.09);
+}
+.partner-card .card-flag { height: 28px; border-radius: 3px; margin-bottom: 0.8rem; }
+.partner-card .card-name { font-family: var(--font-display); font-size: 1.1rem; color: var(--navy); margin-bottom: 0.25rem; }
+.partner-card .card-org { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.2rem; line-height: 1.4; }
+.partner-card .card-loc { font-size: 0.83rem; color: #9ca3af; }
+</style>

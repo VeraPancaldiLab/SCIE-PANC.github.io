@@ -1,0 +1,259 @@
+---
+// src/pages/project.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="SCIE-PANC — Project">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label fade-up">Science</span>
+      <h1 class="page-title fade-up fade-up-d1">The Project</h1>
+      <p class="page-subtitle fade-up fade-up-d2">
+        Understanding and overcoming therapy resistance in pancreatic cancer through 
+        epigenomics, mechanobiology, and computational modeling.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="project-body">
+    <div class="container project-layout">
+
+      <div class="project-toc">
+        <div class="toc-inner">
+          <div class="toc-title">Contents</div>
+          <nav>
+            <a href="#background">Background</a>
+            <a href="#hypothesis">Hypothesis</a>
+            <a href="#approach">Our Approach</a>
+            <a href="#team-expertise">Team Expertise</a>
+          </nav>
+        </div>
+      </div>
+
+      <article class="project-content">
+
+        <div id="background" class="content-block fade-up">
+          <h2>Background</h2>
+          <p>
+            Pancreatic ductal adenocarcinoma (PDAC) is an aggressive, highly metastatic and 
+            one of the most therapy-resistant cancers. Poor prognosis of PDAC patients is 
+            attributed to the high heterogeneity of PDAC tumors, and to their fibrotic and 
+            immune-averse tumor microenvironment (TME). However, how the PDAC TME responds 
+            and adapts to standard therapy at the level of the 3D epigenome remains 
+            surprisingly unknown.
+          </p>
+        </div>
+
+        <div id="hypothesis" class="content-block fade-up">
+          <h2>Hypothesis</h2>
+          <p>
+            We propose that epigenetic changes affecting the stroma and immune compartment 
+            affect tumor cell identity (and vice versa) and explain a substantial part of 
+            PDAC therapy-resistant nature. Specifically, we postulate that changes in epigenetic 
+            marks, 3D genome organization, and the mechanical properties of the TME engage in 
+            complex crosstalk that needs to be dissected and targeted to render PDAC susceptible 
+            to therapy.
+          </p>
+        </div>
+
+        <div id="approach" class="content-block fade-up">
+          <h2>Our Approach</h2>
+          <p>To this end, we plan to:</p>
+          <ol class="approach-list">
+            <li>
+              <strong>Characterize</strong> the PDAC TME at high spatial resolution, studying 
+              3D epigenetic and mechanical properties of cancer and stromal cells.
+            </li>
+            <li>
+              <strong>Screen</strong> a large selection of epigenetic drugs and modifiers, 
+              including new and repurposed compounds produced by our consortium, for their ability 
+              to reprogram tumors and improve antitumoral responsiveness of the PDAC niche.
+            </li>
+            <li>
+              <strong>Understand</strong> how cell-cell crosstalk is modulated and related to 
+              mechanical cues via computational simulations of multi-level processes from chromatin 
+              reorganization to inter-cell interactions.
+            </li>
+            <li>
+              <strong>Validate</strong> new combinatorial treatments in patient material.
+            </li>
+          </ol>
+          <p style="margin-top:1.5rem;">
+            Our endeavor requires a diverse and expansive skillset. We brought together experts 
+            in 3D-(epi)genomics, integrative bioinformatics, mechanobiology, computational 
+            modeling, drug screening and PDAC biology from six countries and three continents. 
+            Together, we will study patient material by spatially-resolved proteomics, bulk 
+            transcriptomics and computational network-based integration.
+          </p>
+          <p>
+            We will also exploit our clinically-annotated collection of patient-derived organoids 
+            in co-cultures with autologous fibroblasts to screen compounds targeting the epigenome, 
+            signaling and mechanobiology pathways. For those compounds showing most promise, we 
+            will perform extensive characterization via epigenomic and 3D chromatin interaction 
+            profiling in organoids.
+          </p>
+          <p>
+            The outcome of the screen and the epigenomic characterization will feed into a novel 
+            simulation framework combining epigenetic and mechanical properties of TME cells and 
+            matrix to model inter-cell communication and predict responses. Last, selected 
+            epidrugs in combination with standard chemotherapy will be validated in 
+            ex vivo-grown precision-cut tumor slices.
+          </p>
+        </div>
+
+        <div id="team-expertise" class="content-block fade-up">
+          <h2>Team Expertise</h2>
+          <div class="expertise-grid">
+            {[
+              { icon: '🧬', area: '3D-(Epi)genomics', desc: 'Profiling chromatin organization and epigenetic marks at single-cell and spatial resolution.' },
+              { icon: '💻', area: 'Integrative Bioinformatics', desc: 'Network-based computational integration of multi-omics datasets.' },
+              { icon: '⚙️', area: 'Mechanobiology', desc: 'Studying mechanical properties of the tumor microenvironment.' },
+              { icon: '🔬', area: 'Drug Screening', desc: 'High-throughput screening of epigenetic drugs and modifiers.' },
+              { icon: '📊', area: 'Computational Modeling', desc: 'Multi-level simulations from chromatin to inter-cell interactions.' },
+              { icon: '🏥', area: 'PDAC Biology', desc: 'Clinical expertise and patient-derived organoid models.' },
+            ].map(e => (
+              <div class="expertise-card">
+                <div class="expertise-icon">{e.icon}</div>
+                <div class="expertise-area">{e.area}</div>
+                <div class="expertise-desc">{e.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="outcome-box fade-up">
+          <h3>Expected Outcomes</h3>
+          <p>
+            We expect our unique approach to define new regimes for modulating the PDAC TME 
+            in favor of therapy and to identify epigenomic and mechanosensitive dependencies, 
+            allowing for precise patient stratification and paving the way for new therapies.
+          </p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.page-hero {
+  background: var(--navy);
+  padding-block: 5rem;
+  color: #fff;
+}
+.page-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.page-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 56ch;
+  line-height: 1.7;
+}
+
+.project-body { padding-block: 4rem 6rem; }
+
+.project-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+@media (max-width: 760px) {
+  .project-layout { grid-template-columns: 1fr; }
+  .project-toc { display: none; }
+}
+
+.toc-inner {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+  padding: 1.2rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.toc-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+.toc-inner nav { display: flex; flex-direction: column; gap: 0.1rem; }
+.toc-inner a {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.toc-inner a:hover { background: var(--off-white); color: var(--navy); }
+
+.content-block { margin-bottom: 3rem; }
+.content-block h2 {
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--off-white);
+}
+.content-block p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1.02rem;
+  margin-bottom: 1em;
+}
+
+.approach-list {
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.approach-list li {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1.02rem;
+}
+.approach-list strong { color: var(--navy); }
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.expertise-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+.expertise-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.expertise-area { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--navy); }
+.expertise-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+.outcome-box {
+  background: linear-gradient(135deg, var(--navy) 0%, #1d3a6e 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  margin-top: 1rem;
+}
+.outcome-box h3 {
+  color: var(--blue-light);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+.outcome-box p {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+}
+</style>
