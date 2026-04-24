@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SCIE-PANC — Project</title>
+  <link rel="icon" href="images/trasncan_logo.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .project-body{padding-block:4rem 6rem}
+    .project-layout{display:grid;grid-template-columns:200px 1fr;gap:4rem;align-items:start}
+    @media(max-width:760px){.project-layout{grid-template-columns:1fr}.toc{display:none}}
+    .toc{position:sticky;top:calc(var(--nav-h) + 2rem);background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.2rem}
+    .toc-title{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
+    .toc nav{display:flex;flex-direction:column;gap:.05rem}
+    .toc a{font-size:.86rem;color:var(--muted);padding:.28rem .5rem;border-radius:6px;text-decoration:none}
+    .toc a:hover{background:var(--off-white);color:var(--navy)}
+    .content-block{margin-bottom:3rem}
+    .content-block h2{font-size:1.6rem;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--off-white)}
+    .content-block p{color:var(--muted);line-height:1.8;font-size:1.01rem;margin-bottom:1em}
+    .approach-list{padding-left:1.3rem;display:flex;flex-direction:column;gap:.75rem;margin-top:1rem;color:var(--muted);font-size:1.01rem;line-height:1.7}
+    .approach-list strong{color:var(--navy)}
+    .expertise-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:1rem;margin-top:1.2rem}
+    .expertise-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.2rem}
+    .ex-icon{font-size:1.55rem;margin-bottom:.5rem}
+    .ex-area{font-weight:700;font-size:.93rem;margin-bottom:.35rem;color:var(--navy)}
+    .ex-desc{font-size:.84rem;color:var(--muted);line-height:1.5}
+    .outcome-box{background:linear-gradient(135deg,var(--navy),#1d3a6e);color:#fff;border-radius:20px;padding:2rem 2.5rem;margin-top:1rem}
+    .outcome-box h3{color:var(--blue-light);font-size:1.08rem;margin-bottom:.75rem;font-family:var(--font-b);font-weight:700;letter-spacing:.03em;text-transform:uppercase;font-size:.8rem}
+    .outcome-box p{color:rgba(255,255,255,.8);line-height:1.8}
+
+    .scroll-fu{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .scroll-fu.visible{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/trasncan_logo.png" alt="SCIE-PANC"/>
+      SCIE-PANC
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="project.html" class="active">Project</a>
+      <a href="news.html">News</a>
+      <a href="publications.html">Publications</a>
+      <a href="https://github.com/SCIE-PANC" class="nav-gh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.021C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="label fu" style="color:var(--blue-light)">Science</span>
+      <h1 class="page-title fu d1">The Project</h1>
+      <p class="page-subtitle fu d2">Understanding and overcoming therapy resistance in pancreatic cancer through epigenomics, mechanobiology, and computational modeling.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="project-body">
+    <div class="container project-layout">
+
+      <aside class="toc">
+        <div class="toc-title">Contents</div>
+        <nav>
+          <a href="#background">Background</a>
+          <a href="#hypothesis">Hypothesis</a>
+          <a href="#approach">Our Approach</a>
+          <a href="#expertise">Team Expertise</a>
+        </nav>
+      </aside>
+
+      <article>
+
+        <div id="background" class="content-block scroll-fu">
+          <h2>Background</h2>
+          <p>Pancreatic ductal adenocarcinoma (PDAC) is an aggressive, highly metastatic and one of the most therapy-resistant cancers. Poor prognosis of PDAC patients is attributed to the high heterogeneity of PDAC tumors, and to their fibrotic and immune-averse tumor microenvironment (TME). However, how the PDAC TME responds and adapts to standard therapy at the level of the 3D epigenome remains surprisingly unknown.</p>
+        </div>
+
+        <div id="hypothesis" class="content-block scroll-fu">
+          <h2>Hypothesis</h2>
+          <p>We propose that epigenetic changes affecting the stroma and immune compartment affect tumor cell identity (and vice versa) and explain a substantial part of PDAC therapy-resistant nature. Specifically, we postulate that changes in epigenetic marks, 3D genome organization, and the mechanical properties of the TME engage in complex crosstalk that needs to be dissected and targeted to render PDAC susceptible to therapy.</p>
+        </div>
+
+        <div id="approach" class="content-block scroll-fu">
+          <h2>Our Approach</h2>
+          <p>To this end, we plan to:</p>
+          <ol class="approach-list">
+            <li><strong>Characterize</strong> the PDAC TME at high spatial resolution, studying 3D epigenetic and mechanical properties of cancer and stromal cells.</li>
+            <li><strong>Screen</strong> a large selection of epigenetic drugs and modifiers, including new and repurposed compounds produced by our consortium, for their ability to reprogram tumors and improve antitumoral responsiveness of the PDAC niche.</li>
+            <li><strong>Understand</strong> how cell-cell crosstalk is modulated and related to mechanical cues via computational simulations of multi-level processes from chromatin reorganization to inter-cell interactions.</li>
+            <li><strong>Validate</strong> new combinatorial treatments in patient material.</li>
+          </ol>
+          <p style="margin-top:1.5rem">Our endeavor requires a diverse and expansive skillset. We brought together experts in 3D-(epi)genomics, integrative bioinformatics, mechanobiology, computational modeling, drug screening and PDAC biology from six countries and three continents.</p>
+          <p>We will also exploit our clinically-annotated collection of patient-derived organoids in co-cultures with autologous fibroblasts to screen compounds targeting the epigenome, signaling and mechanobiology pathways. The outcome of the screen and epigenomic characterization will feed into a novel simulation framework combining epigenetic and mechanical properties of TME cells and matrix to model inter-cell communication and predict responses.</p>
+        </div>
+
+        <div id="expertise" class="content-block scroll-fu">
+          <h2>Team Expertise</h2>
+          <div class="expertise-grid">
+            <div class="expertise-card"><div class="ex-icon">🧬</div><div class="ex-area">3D-(Epi)genomics</div><div class="ex-desc">Profiling chromatin organization and epigenetic marks at single-cell and spatial resolution.</div></div>
+            <div class="expertise-card"><div class="ex-icon">💻</div><div class="ex-area">Integrative Bioinformatics</div><div class="ex-desc">Network-based computational integration of multi-omics datasets.</div></div>
+            <div class="expertise-card"><div class="ex-icon">⚙️</div><div class="ex-area">Mechanobiology</div><div class="ex-desc">Studying mechanical properties of the tumor microenvironment.</div></div>
+            <div class="expertise-card"><div class="ex-icon">🔬</div><div class="ex-area">Drug Screening</div><div class="ex-desc">High-throughput screening of epigenetic drugs and modifiers.</div></div>
+            <div class="expertise-card"><div class="ex-icon">📊</div><div class="ex-area">Computational Modeling</div><div class="ex-desc">Multi-level simulations from chromatin to inter-cell interactions.</div></div>
+            <div class="expertise-card"><div class="ex-icon">🏥</div><div class="ex-area">PDAC Biology</div><div class="ex-desc">Clinical expertise and patient-derived organoid models.</div></div>
+          </div>
+        </div>
+
+        <div class="outcome-box scroll-fu">
+          <h3>Expected Outcomes</h3>
+          <p>We expect our unique approach to define new regimes for modulating the PDAC TME in favor of therapy and to identify epigenomic and mechanosensitive dependencies, allowing for precise patient stratification and paving the way for new therapies.</p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><span class="footer-brand-name">SCIE-PANC</span><p class="footer-desc">An international research consortium studying pancreatic cancer therapy evasion.</p></div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a><a href="project.html">Project</a><a href="news.html">News</a><a href="publications.html">Publications</a><a href="https://github.com/SCIE-PANC" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom"><p>© <span id="yr"></span> SCIE-PANC Consortium.</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>

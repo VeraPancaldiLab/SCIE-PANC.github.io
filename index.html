@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SCIE-PANC — Home</title>
+  <meta name="description" content="Stromal Compartment and Immune Epigenome spatial networks to counter therapy evasion in PANcreatic Cancer"/>
+  <link rel="icon" href="images/trasncan_logo.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Hero ── */
+    .hero{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background:url('images/network_banner.png') center/cover no-repeat;filter:brightness(.32) saturate(.55)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,.78),rgba(29,78,216,.28))}
+    .hero-content{position:relative;z-index:2;padding-block:5.5rem}
+    .hero-flags{display:flex;gap:.75rem;margin-bottom:1.6rem}
+    .hero-flags img{height:30px;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+    .hero-title{font-size:clamp(3rem,7vw,5.8rem);color:#fff;letter-spacing:-.02em;margin-bottom:1rem}
+    .hero-sub{font-size:clamp(.98rem,2vw,1.18rem);color:rgba(255,255,255,.78);line-height:1.65;max-width:54ch;margin-bottom:2.2rem}
+    .hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2rem}
+    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.81rem;color:rgba(255,255,255,.5);letter-spacing:.02em}
+    .pulse{width:6px;height:6px;border-radius:50%;background:var(--blue-light);animation:p 2s infinite}
+    @keyframes p{0%,100%{opacity:1}50%{opacity:.25}}
+
+    /* ── About strip ── */
+    .about{padding-block:5rem}
+    .about-inner{display:grid;grid-template-columns:1fr 270px;gap:4rem;align-items:center}
+    @media(max-width:780px){.about-inner{grid-template-columns:1fr}}
+    .about h2{font-size:clamp(1.7rem,3.5vw,2.6rem);margin-bottom:1.1rem}
+    .about p{color:var(--muted);line-height:1.8;font-size:1.02rem;margin-bottom:1rem}
+    .text-link{display:inline-block;margin-top:.6rem;font-weight:600;font-size:.94rem;color:var(--blue)}
+    .text-link:hover{text-decoration:underline}
+    .stat-stack{display:flex;flex-direction:column;gap:1rem}
+    .stat-card{background:var(--navy);color:#fff;border-radius:16px;padding:1.4rem;text-align:center}
+    .stat-n{font-family:var(--font-d);font-size:3rem;font-weight:700;color:var(--blue-light);line-height:1}
+    .stat-lbl{font-size:.83rem;color:rgba(255,255,255,.55);margin-top:.4rem;letter-spacing:.05em}
+
+    /* ── Team ── */
+    .team{padding-block:5rem;background:#fff}
+    .team h2{font-size:clamp(1.7rem,3.5vw,2.6rem);margin-bottom:2rem}
+    .lead-card{background:var(--navy);color:#fff;border-radius:20px;padding:2rem;margin-bottom:2.5rem;display:flex;gap:1.4rem;align-items:flex-start}
+    .lead-card img{height:38px;border-radius:3px;flex-shrink:0}
+    .card-role{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-light);margin-bottom:.3rem}
+    .card-name{font-family:var(--font-d);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.25rem}
+    .card-org{font-size:.92rem;color:rgba(255,255,255,.68);margin-bottom:.18rem}
+    .card-loc{font-size:.85rem;color:rgba(255,255,255,.42)}
+    .partners-lbl{font-size:1rem;font-weight:600;color:var(--muted);margin-bottom:1.1rem;letter-spacing:.03em}
+    .partners-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+    .partner-card{background:var(--warm-white);border:1px solid var(--border);border-radius:16px;padding:1.35rem;transition:transform .2s,box-shadow .2s}
+    .partner-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.09)}
+    .partner-card img{height:26px;border-radius:3px;margin-bottom:.75rem}
+    .partner-card .card-name{font-family:var(--font-d);font-size:1.08rem;color:var(--navy);margin-bottom:.22rem}
+    .partner-card .card-org{font-size:.86rem;color:var(--muted);margin-bottom:.18rem;line-height:1.4}
+    .partner-card .card-loc{font-size:.81rem;color:#9ca3af}
+
+    /* scroll-fu */
+    .scroll-fu{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .scroll-fu.visible{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="site-nav">
+  <div class="nav-inner container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/trasncan_logo.png" alt="SCIE-PANC"/>
+      SCIE-PANC
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="project.html">Project</a>
+      <a href="news.html">News</a>
+      <a href="publications.html">Publications</a>
+      <a href="https://github.com/SCIE-PANC" class="nav-gh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.021C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-flags fu">
+        <img src="images/flags/de.png" alt="Germany"/>
+        <img src="images/flags/es.png" alt="Spain"/>
+        <img src="images/flags/fr.png" alt="France"/>
+        <img src="images/flags/ie.png" alt="Ireland"/>
+        <img src="images/flags/tk.png" alt="Türkiye"/>
+        <img src="images/flags/tw.png" alt="Taiwan"/>
+      </div>
+      <h1 class="hero-title fu d1">SCIE-PANC</h1>
+      <p class="hero-sub fu d2">
+        Stromal Compartment and Immune Epigenome spatial networks<br>
+        to counter therapy evasion in PANcreatic Cancer
+      </p>
+      <div class="hero-actions fu d3">
+        <a href="project.html" class="btn btn-primary">Learn about the project</a>
+        <a href="publications.html" class="btn btn-outline">Publications</a>
+      </div>
+      <div class="hero-badge fu d4">
+        <span class="pulse"></span>
+        International consortium &nbsp;·&nbsp; 6 countries &nbsp;·&nbsp; 3 continents
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container about-inner">
+      <div>
+        <span class="label">About</span>
+        <h2>An interdisciplinary effort against pancreatic cancer</h2>
+        <p>The SCIE-PANC project unites researchers from six countries across three continents to improve treatment outcomes in pancreatic ductal adenocarcinoma (PDAC) — one of the most aggressive and therapy-resistant cancers known.</p>
+        <p>Our consortium brings together experts in 3D-epigenomics, integrative bioinformatics, mechanobiology, computational modeling, drug screening, and PDAC biology, all working in concert toward new therapeutic strategies.</p>
+        <a href="project.html" class="text-link">Read the full project description →</a>
+      </div>
+      <div class="stat-stack scroll-fu">
+        <div class="stat-card"><div class="stat-n">6</div><div class="stat-lbl">Partner Countries</div></div>
+        <div class="stat-card"><div class="stat-n">3</div><div class="stat-lbl">Continents</div></div>
+        <div class="stat-card"><div class="stat-n">5</div><div class="stat-lbl">Research Groups</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TEAM -->
+  <section class="team">
+    <div class="container">
+      <span class="label">Team</span>
+      <h2>Project Consortium</h2>
+
+      <!-- Lead -->
+      <div class="lead-card scroll-fu">
+        <img src="images/flags/de.png" alt="Germany"/>
+        <div>
+          <div class="card-role">Project Coordinator</div>
+          <div class="card-name">Argyris Papantonis</div>
+          <div class="card-org">University Medical Center Göttingen</div>
+          <div class="card-loc">Göttingen, Germany</div>
+        </div>
+      </div>
+
+      <div class="partners-lbl">Project Partners</div>
+      <div class="partners-grid">
+        <article class="partner-card scroll-fu">
+          <img src="images/flags/es.png" alt="Spain"/>
+          <div class="card-name">Biola Maria Javierre</div>
+          <div class="card-org">Institute for Health Science Research Germans Trias i Pujol</div>
+          <div class="card-loc">Barcelona, Spain</div>
+        </article>
+        <article class="partner-card scroll-fu">
+          <img src="images/flags/ie.png" alt="Ireland"/>
+          <div class="card-name">Grainne O'Kane</div>
+          <div class="card-org">Trinity St. James Cancer Institute</div>
+          <div class="card-loc">Dublin, Ireland</div>
+        </article>
+        <article class="partner-card scroll-fu">
+          <img src="images/flags/fr.png" alt="France"/>
+          <div class="card-name">Vera Pancaldi</div>
+          <div class="card-org">Cancer Research Center of Toulouse (CRCT) — INSERM</div>
+          <div class="card-loc">Toulouse, France</div>
+        </article>
+        <article class="partner-card scroll-fu">
+          <img src="images/flags/tw.png" alt="Taiwan"/>
+          <div class="card-name">Shu-Ping Wang</div>
+          <div class="card-org">Academia Sinica</div>
+          <div class="card-loc">Taipei, Taiwan</div>
+        </article>
+        <article class="partner-card scroll-fu">
+          <img src="images/flags/tk.png" alt="Türkiye"/>
+          <div class="card-name">Aykut Erbas</div>
+          <div class="card-org">Bilkent University</div>
+          <div class="card-loc">Ankara, Türkiye</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <span class="footer-brand-name">SCIE-PANC</span>
+      <p class="footer-desc">An international research consortium studying pancreatic cancer therapy evasion.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="news.html">News</a>
+      <a href="publications.html">Publications</a>
+      <a href="https://github.com/SCIE-PANC" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="yr"></span> SCIE-PANC Consortium. Static site — no build step required.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>

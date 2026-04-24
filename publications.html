@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SCIE-PANC — Publications</title>
+  <link rel="icon" href="images/trasncan_logo.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .pub-section{padding-block:5rem}
+    .pub-year-group{margin-bottom:3rem}
+    .pub-year{font-size:2rem;margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:2px solid var(--off-white)}
+    .pub-items{list-style:none;display:flex;flex-direction:column;gap:1.1rem}
+    .pub-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem;opacity:0;transform:translateY(16px);animation:fadeUp .55s ease forwards}
+    .pub-title{font-weight:700;font-size:1.04rem;margin-bottom:.4rem}
+    .pub-title a{color:var(--navy)}
+    .pub-title a:hover{text-decoration:underline}
+    .pub-authors{font-size:.87rem;color:var(--muted);margin-bottom:.18rem}
+    .pub-journal{font-size:.87rem;color:var(--blue);font-style:italic;margin-bottom:.55rem}
+    .pub-doi{font-size:.81rem;font-weight:600;color:var(--blue)}
+    .pub-doi:hover{text-decoration:underline}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+    .fu{animation:fadeUp .7s ease both}
+    .d1{animation-delay:.1s}.d2{animation-delay:.2s}
+  </style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner container">
+    <a href="index.html" class="nav-logo"><img src="images/trasncan_logo.png" alt="SCIE-PANC"/> SCIE-PANC</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="news.html">News</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="https://github.com/SCIE-PANC" class="nav-gh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.021C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="label fu" style="color:var(--blue-light)">Research output</span>
+      <h1 class="page-title fu d1">Publications</h1>
+      <p class="page-subtitle fu d2">Scientific articles, preprints, and data resources produced by the SCIE-PANC consortium.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="pub-section">
+    <div class="container" id="pub-container">
+      <!-- Populated by JS below -->
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><span class="footer-brand-name">SCIE-PANC</span><p class="footer-desc">An international research consortium studying pancreatic cancer therapy evasion.</p></div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a><a href="project.html">Project</a><a href="news.html">News</a><a href="publications.html">Publications</a><a href="https://github.com/SCIE-PANC" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom"><p>© <span id="yr"></span> SCIE-PANC Consortium.</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ─── ADD YOUR PUBLICATIONS HERE ──────────────────────────────────
+// Each object: { year, title, authors, journal, doi (optional) }
+const publications = [
+  // Example (uncomment and edit):
+  // {
+  //   year: 2025,
+  //   title: 'Spatial epigenomics reveals TME remodeling in PDAC',
+  //   authors: 'Papantonis A, Javierre BM, Pancaldi V, et al.',
+  //   journal: 'Nature Cancer',
+  //   doi: 'https://doi.org/10.xxxx/xxxxxx'
+  // },
+];
+// ─────────────────────────────────────────────────────────────────
+
+const container = document.getElementById('pub-container');
+
+if (publications.length === 0) {
+  container.innerHTML = `
+    <div class="empty-state">
+      <div class="empty-icon">📄</div>
+      <h2>Publications coming soon</h2>
+      <p>As the SCIE-PANC project progresses, scientific publications will be listed here. Check back for updates or follow our GitHub repository.</p>
+      <a href="https://github.com/SCIE-PANC" class="btn-navy" target="_blank" rel="noopener">Follow on GitHub</a>
+    </div>`;
+} else {
+  const years = [...new Set(publications.map(p => p.year))].sort((a,b) => b - a);
+  container.innerHTML = years.map(year => {
+    const items = publications.filter(p => p.year === year);
+    return `
+      <div class="pub-year-group">
+        <h2 class="pub-year">${year}</h2>
+        <ul class="pub-items">
+          ${items.map((p, i) => `
+            <li class="pub-item" style="animation-delay:${i*0.07}s">
+              <div class="pub-title">${p.doi ? `<a href="${p.doi}" target="_blank" rel="noopener">${p.title}</a>` : p.title}</div>
+              <div class="pub-authors">${p.authors}</div>
+              <div class="pub-journal">${p.journal}</div>
+              ${p.doi ? `<a class="pub-doi" href="${p.doi}" target="_blank" rel="noopener">DOI →</a>` : ''}
+            </li>`).join('')}
+        </ul>
+      </div>`;
+  }).join('');
+}
+</script>
+</body>
+</html>
